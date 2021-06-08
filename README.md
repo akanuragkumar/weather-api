@@ -115,7 +115,7 @@ To work in a sandboxed Python environment it is recommended to install the app i
 ```
 
 
-### `This Endpoint takes email ids in a list, validates them, store them in MailingTask model with status as pending, calls celery task to generate excel report for 30 citites and send them mail with attachment.`
+### `This Endpoint takes email ids in a list, validates them, store them in MailingTask model with status as pending, calls celery task to generate excel report for 30 citites and send them mail with attachment and updates the status in MailingTask object as 'SUCCESS'.`
 
 3. `POST /api/mailing_list/` 
 
