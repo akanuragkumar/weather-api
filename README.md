@@ -84,15 +84,15 @@ To work in a sandboxed Python environment it is recommended to install the app i
 
 ```json
  application/json - {
- “count”: <total number of cities>,
- “next”: <link for next page, if present>,
- “previous”: <link for previous page>,
+ “count”: "total number of cities",
+ “next”: "link for next page, if present",
+ “previous”: "link for previous page",
  “data”: [
  {
- “city”: <city name>,
- “current_temp”: <current tempreture of the city>,
- “feels_like_temp”: <feels like tempreture of the city>,
- “modified_on”: <last updated datetime for this city>
+ “city”: "city name",
+ “current_temp”: "current tempreture of the city",
+ “feels_like_temp”: "feels like tempreture of the city",
+ “modified_on”: "last updated datetime for this city"
  },
  ...
  ]
@@ -104,15 +104,19 @@ To work in a sandboxed Python environment it is recommended to install the app i
 2. `POST /api/current_weather/` 
 
 ```json
- application/json - {'city': 'Balasore'}
+ application/json - {"city": "mumbai"}
 ```
 ##### `response`
 
 ```json
 {
-    'status': 'New city added to the weather list.'
+    "status": "New city added to the weather list."
 }   
 ```
+
+
+### `This Endpoint takes email ids in a list, validates them, store them in MailingTask model with status as pending, calls celery task to generate excel report for 30 citites and send them mail with attachment.`
+
 3. `POST /api/mailing_list/` 
 
 ```json
