@@ -42,7 +42,7 @@ To work in a sandboxed Python environment it is recommended to install the app i
 
 ```json
  application/json - {
-    "username": "username:,
+    "username": "username,
     "password": "password"
 }
 ```
@@ -57,7 +57,7 @@ To work in a sandboxed Python environment it is recommended to install the app i
 
 ```json
  application/json - {
-    "username": "username:,
+    "username": "username,
     "password": "password"
 }
 ```
