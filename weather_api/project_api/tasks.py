@@ -72,8 +72,6 @@ def email_report(emails, uuid):
 def weather_report():
     """Task for updating weather report every 30 minutes."""
     api_key = os.environ['api_key']
-
-    # "http://api.openweathermap.org/data/2.5/weather?"
     main_url = os.environ['main_url']
 
     objects = CityWeatherCollection.objects.all()
